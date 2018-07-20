@@ -1,0 +1,5 @@
+services:
+  playground_event_subscriber:
+    class: Drupal\playground\EventSubscriber\PlaygroundSubscriber
+    tags:
+      - {name: event_subscriber}
