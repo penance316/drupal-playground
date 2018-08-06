@@ -1,3 +1,4 @@
 # drupal-playground
 
-run code on each page load.
+Dev drupal module to run code on each page load.
+
