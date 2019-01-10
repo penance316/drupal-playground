@@ -1,0 +1,26 @@
+playground.entitytest:
+  path: '/playground/test/{entity_type}/{entity}/{view_mode}'
+  defaults:
+    _controller: '\Drupal\playground\Controller\TestController::content'
+    _title: 'Test entity view'
+    view_mode: 'default'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      entity:
+        type: entity:{entity_type}
+    no_cache: TRUE
+
+playground.test:
+  path: '/playground/test'
+  defaults:
+    _controller: '\Drupal\playground\Controller\TestController::test'
+    _title: 'Test empty controller'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      entity:
+        type: entity:{entity_type}
+    no_cache: TRUE
