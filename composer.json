@@ -1,0 +1,13 @@
+{
+    "name": "penance316/drupal-playground",
+    "description": "Dev drupal module to help with debugging.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nero Denney",
+            "email": "penance316@gmail.com"
+            "homepage": "https://nerodenney.com"
+        }
+    ],
+    "require": {}
+}
