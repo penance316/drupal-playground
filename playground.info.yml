@@ -2,4 +2,5 @@ name: Playground
 type: module
 description: 'Execute some code when Drupal loads.'
 core: 8.x
+core_version_requirement: ^8 || ^9
 version: VERSION
