@@ -1,5 +1,5 @@
-playground.entitytest:
-  path: '/playground/test/{entity_type}/{entity}/{view_mode}'
+playground.entity:
+  path: '/playground/entity/{entity_type}/{entity}/{view_mode}'
   defaults:
     _controller: '\Drupal\playground\Controller\TestController::content'
     _title: 'Test entity view'
@@ -12,6 +12,19 @@ playground.entitytest:
         type: entity:{entity_type}
     no_cache: TRUE
 
+playground.dependency:
+  path: '/playground/dependency/{module_name}'
+  defaults:
+    _controller: '\Drupal\playground\Controller\TestController::getDependencies'
+    _title: 'Test dependency injection'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      module_name:
+        type: string
+    no_cache: TRUE
+
 playground.test:
   path: '/playground/test'
   defaults:
@@ -20,7 +33,4 @@ playground.test:
   requirements:
     _permission: 'access content'
   options:
-    parameters:
-      entity:
-        type: entity:{entity_type}
     no_cache: TRUE
